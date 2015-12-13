@@ -1,0 +1,14 @@
+{
+  "port": 8222,
+  "db": {
+    "connection": "localhost",
+    "name": "test",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  }
+}

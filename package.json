@@ -1,0 +1,25 @@
+{
+  "name": "test_express_app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "node-uuid": "latest",
+    "nconf": "latest",
+    "winston": "latest",
+    "async": "latest",
+    "mongodb": "latest",
+    "ejs-locals": "latest",
+    "connect-mongo": "latest",
+    "validator": "latest",
+    "string": "latest"
+  },
+  "devDependencies": {
+    "morgan": "latest",
+    "sockjs": "latest"
+  }
+}

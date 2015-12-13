@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>
+<input id="i" type="text" />
+<button id="b">send</button>
+<script>
+    var sock = new SockJS('http://127.0.0.1:8222/stream');
+
+    sock.onopen = function() {
+//        console.log('open');
+        sock.send("aasdass");
+    };
+    sock.onmessage = function(e) {
+        console.log('message', e.data);
+    };
+    sock.onclose = function() {
+        console.log('close');
+    };
+
+    $('#b').click(function(){
+        var msg = $('#i').val();
+        sock.send(msg);
+    });
+
+</script>
+</body>
+</html>
